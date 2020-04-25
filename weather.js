@@ -1,5 +1,8 @@
 $(document).ready(function () {
   console.log("Ready!");
+  var city = localStorage.getItem("city");
+  openWeatherCall(city);
+  appendCity(city);
 
   $("#search-button").on("click", function () {
     event.preventDefault();
