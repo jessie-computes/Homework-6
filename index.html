@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html class="no-js">
+  <!--<![endif]-->
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title></title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+  </head>
+  <body>
+    <div class="jumbotron jumbotron-fluid">
+      <div class="container">
+        <h3 style="text-align: center; margin: 0px;">Weather Dashboard</h3>
+      </div>
+    </div>
+    <div class="row entire-row">
+      <div class="col-3" style="padding-left: 40px;">
+        <div class="row">
+          <h3>Search for a City!</h3>
+        </div>
+        <div class="row">
+          <form>
+            <div class="form-row align-items-center">
+              <div class="col-auto">
+                <label class="sr-only" for="inlineFormInput">Name</label>
+                <input type="text" class="form-control mb-2" id="city-input" />
+              </div>
+              <div class="col-auto">
+                <button
+                  type="submit"
+                  class="btn btn-primary mb-2"
+                  id="search-button"
+                >
+                  Search
+                </button>
+              </div>
+            </div>
+          </form>
+        </div>
+        <div id="cities-list"></div>
+      </div>
+      <div class="col-8 entire-right">
+        <div class="row">
+          <div class="card daily-weather">
+            <div class="card-body daily-weather"></div>
+          </div>
+        </div>
+        <div class="row">
+          <h3>5-Day Forecast:</h3>
+        </div>
+        <div class="row five-day-forecast-row">
+          <div class="card days">
+            <div class="card-body card-days day-one"></div>
+          </div>
+          <div class="card days">
+            <div class="card-body card-days day-two"></div>
+          </div>
+          <div class="card days">
+            <div class="card-body card-days day-three"></div>
+          </div>
+          <div class="card days">
+            <div class="card-body card-days day-four"></div>
+          </div>
+          <div class="card days">
+            <div class="card-body card-days day-five"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.min.js"
+      integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+      crossorigin="anonymous"
+    ></script>
+    <script src="weather.js"></script>
+  </body>
+</html>

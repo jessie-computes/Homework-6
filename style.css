@@ -1,0 +1,25 @@
+.daily-weather {
+  width: 100%;
+  padding: 10px;
+  margin-right: 40px;
+  margin-bottom: 20px;
+}
+.jumbotron {
+  padding: 20px;
+  background-color: #454545;
+  color: white;
+}
+
+.days {
+  width: 17%;
+  background-color: #1e65fc;
+  margin: 10px;
+}
+
+.card-days {
+  color: white;
+}
+
+#cities-list {
+  width: 100%;
+}
