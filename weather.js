@@ -11,10 +11,11 @@ $(document).ready(function () {
     appendCity(cityName);
   });
 
-//   $(".city-button").on("click", function () {
-//     event.preventDefault();
-//     console.log("Click.");
-//   });
+  $("#cities-list").on("click", function () {
+    event.preventDefault();
+    console.log($(this));
+    console.log("Click.");
+  });
 
   function appendCity(cityName) {
     var cityDiv = `<div class="city-button" id="${cityName}"><button type="button" class="btn-block city-button">${cityName}</button></div>`;
@@ -40,7 +41,7 @@ $(document).ready(function () {
       method: "GET",
     }).then(function (response) {
       // day 1
-      var dateOne = response.list[0].dt;
+      var dateOne = moment().format('l'); 
       var iconOneURL =
         "http://openweathermap.org/img/w/" +
         response.list[0].weather[0].icon +
@@ -57,7 +58,7 @@ $(document).ready(function () {
       $(".day-one").html(dayOneHTML);
 
       // day 2
-      var dateTwo = response.list[1].dt;
+      var dateTwo = moment().add(1, 'days').calendar();
       var iconTwoURL =
         "http://openweathermap.org/img/w/" +
         response.list[1].weather[0].icon +
@@ -74,7 +75,7 @@ $(document).ready(function () {
       $(".day-two").html(dayTwoHTML);
 
       // day 3
-      var dateThree = response.list[2].dt;
+      var dateThree = moment().add(2, 'days').calendar();
       var iconThreeURL =
         "http://openweathermap.org/img/w/" +
         response.list[2].weather[0].icon +
@@ -91,7 +92,7 @@ $(document).ready(function () {
       $(".day-three").html(dayThreeHTML);
 
       // day 4
-      var dateFour = response.list[3].dt;
+      var dateFour = moment().add(3, 'days').calendar();
       var iconFourURL =
         "http://openweathermap.org/img/w/" +
         response.list[3].weather[0].icon +
@@ -108,7 +109,7 @@ $(document).ready(function () {
       $(".day-four").html(dayFourHTML);
 
       // day 5
-      var dateFive = response.list[4].dt;
+      var dateFive = moment().add(4, 'days').calendar();
       var iconFiveURL =
         "http://openweathermap.org/img/w/" +
         response.list[4].weather[0].icon +
