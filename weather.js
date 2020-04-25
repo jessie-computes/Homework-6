@@ -14,14 +14,8 @@ $(document).ready(function () {
     appendCity(cityName);
   });
 
-  $("#cities-list").on("click", function () {
-    event.preventDefault();
-    console.log($(this));
-    console.log("Click.");
-  });
-
   function appendCity(cityName) {
-    var cityDiv = `<div class="city-button" id="${cityName}"><button type="button" class="btn-block city-button">${cityName}</button></div>`;
+    var cityDiv = `<div class="city-button"><button type="button" id="${cityName}" class="btn-block city-button">${cityName}</button></div>`;
     $("#cities-list").prepend(cityDiv);
   }
 
@@ -154,4 +148,10 @@ $(document).ready(function () {
       $(".daily-weather").html(htmlStr);
     });
   }
+
+  $(".city-button").on("click", ".city-button", function(){
+    event.preventDefault();
+    console.log(this);
+  })
+
 });
